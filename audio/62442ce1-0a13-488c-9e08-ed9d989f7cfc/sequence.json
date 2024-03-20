@@ -1,0 +1,47 @@
+{
+  "duration": 254.8,
+  "loop": true,
+  "outPoints": [],
+  "objects": [
+    {
+      "objectId": "1-Elevator",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -12,
+            "conditions": []
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 0,
+          "duration": 254.8,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/62442ce1-0a13-488c-9e08-ed9d989f7cfc/01Elevator_000000/manifest.mpd",
+            "urlSafari": "audio/62442ce1-0a13-488c-9e08-ed9d989f7cfc/01Elevator_000000/manifest-safari.mpd"
+          }
+        }
+      ]
+    }
+  ]
+}

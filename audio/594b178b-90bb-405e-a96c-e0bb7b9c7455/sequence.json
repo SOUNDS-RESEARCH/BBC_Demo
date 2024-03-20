@@ -1,0 +1,2591 @@
+{
+  "duration": 84.6,
+  "loop": false,
+  "outPoints": [],
+  "objects": [
+    {
+      "objectId": "1-stereo_track",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 1.01,
+          "duration": 81.5,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/001_stereo_track_000000/manifest.mpd",
+            "urlSafari": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/001_stereo_track_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 85,
+          "source": {
+            "type": "image",
+            "src": "images/e08c7bcb-4adf-46c0-abcb-967104ae4c28.jpg",
+            "priority": 1
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "3-silence",
+      "objectBehaviours": [
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "allowedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "deviceControls.7bb8aca4-adba-482b-b289-f0d93995bb90",
+                "operator": "equals",
+                "value": "c4935f0e-b09f-464f-9e6a-e592419c020b",
+                "invertCondition": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 0,
+          "duration": 125,
+          "source": {
+            "type": "image",
+            "src": "images/e08c7bcb-4adf-46c0-abcb-967104ae4c28.jpg",
+            "priority": 3
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "101-gtr_chords",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -120,
+            "conditions": [
+              {
+                "conditionId": "c4466c42-87a9-4d9a-9b63-0a36d0c5b1d6",
+                "property": "session.objectIds",
+                "operator": "equals",
+                "value": "3-silence",
+                "invertCondition": true
+              },
+              {
+                "conditionId": "81f106c7-4323-4409-81d0-e9f6baee62f3",
+                "property": "session.numDevices",
+                "operator": "greaterThan",
+                "value": 2,
+                "invertCondition": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 2.95,
+          "duration": 78.68,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/101_gtr_chords_000000/manifest.mpd",
+            "urlSafari": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/101_gtr_chords_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 125,
+          "source": {
+            "type": "image",
+            "src": "images/e08c7bcb-4adf-46c0-abcb-967104ae4c28.jpg",
+            "priority": 101
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "102-gtr_chords",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "exclusive",
+          "behaviourParameters": {}
+        },
+        {
+          "behaviourType": "muteIf",
+          "behaviourParameters": {
+            "objectId": "3-silence"
+          }
+        },
+        {
+          "behaviourType": "onChange",
+          "behaviourParameters": {
+            "start": "canAlwaysStart",
+            "allocate": [
+              "stayInPrevious"
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 2.95,
+          "duration": 78.86,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/102_gtr_chords_000000/manifest.mpd",
+            "urlSafari": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/102_gtr_chords_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 125,
+          "source": {
+            "type": "image",
+            "src": "images/e08c7bcb-4adf-46c0-abcb-967104ae4c28.jpg",
+            "priority": 102
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "105-pad_high_juno",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -120,
+            "conditions": [
+              {
+                "conditionId": "c4466c42-87a9-4d9a-9b63-0a36d0c5b1d6",
+                "property": "session.objectIds",
+                "operator": "equals",
+                "value": "3-silence",
+                "invertCondition": true
+              },
+              {
+                "conditionId": "9893da75-b027-44de-913d-a17d34bbb910",
+                "property": "session.numDevices",
+                "operator": "greaterThanOrEqual",
+                "value": 3,
+                "invertCondition": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 7.66,
+          "duration": 6.41,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/105_pad_high_juno_000000.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 17.3,
+          "duration": 6.51,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/105_pad_high_juno_000001.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 26.89,
+          "duration": 6.54,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/105_pad_high_juno_000002.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 36.49,
+          "duration": 6.05,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/105_pad_high_juno_000003.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 46.06,
+          "duration": 6.47,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/105_pad_high_juno_000004.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 55.7,
+          "duration": 6.49,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/105_pad_high_juno_000005.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 65.29,
+          "duration": 6.51,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/105_pad_high_juno_000006.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 74.89,
+          "duration": 6.06,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/105_pad_high_juno_000007.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 0,
+          "duration": 125,
+          "source": {
+            "type": "image",
+            "src": "images/e08c7bcb-4adf-46c0-abcb-967104ae4c28.jpg",
+            "priority": 105
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "106-pad_high_juno",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "exclusive",
+          "behaviourParameters": {}
+        },
+        {
+          "behaviourType": "muteIf",
+          "behaviourParameters": {
+            "objectId": "3-silence"
+          }
+        },
+        {
+          "behaviourType": "onChange",
+          "behaviourParameters": {
+            "start": "canAlwaysStart",
+            "allocate": [
+              "stayInPrevious"
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 7.66,
+          "duration": 6.41,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/106_pad_high_juno_000000.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 17.3,
+          "duration": 6.48,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/106_pad_high_juno_000001.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 26.89,
+          "duration": 6.52,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/106_pad_high_juno_000002.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 36.49,
+          "duration": 6.06,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/106_pad_high_juno_000003.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 46.06,
+          "duration": 6.46,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/106_pad_high_juno_000004.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 55.7,
+          "duration": 6.49,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/106_pad_high_juno_000005.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 65.29,
+          "duration": 6.54,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/106_pad_high_juno_000006.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 74.89,
+          "duration": 6.06,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/106_pad_high_juno_000007.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 0,
+          "duration": 125,
+          "source": {
+            "type": "image",
+            "src": "images/e08c7bcb-4adf-46c0-abcb-967104ae4c28.jpg",
+            "priority": 106
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "107-pad_high_organ",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -120,
+            "conditions": [
+              {
+                "conditionId": "c4466c42-87a9-4d9a-9b63-0a36d0c5b1d6",
+                "property": "session.objectIds",
+                "operator": "equals",
+                "value": "3-silence",
+                "invertCondition": true
+              },
+              {
+                "conditionId": "c2778200-98fa-476f-869c-52f9eaba2a1a",
+                "property": "session.numDevices",
+                "operator": "greaterThanOrEqual",
+                "value": 4,
+                "invertCondition": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 7.71,
+          "duration": 6.31,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/107_pad_high_organ_000000.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 17.34,
+          "duration": 6.49,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/107_pad_high_organ_000001.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 26.95,
+          "duration": 6.47,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/107_pad_high_organ_000002.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 36.52,
+          "duration": 6.4,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/107_pad_high_organ_000003.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 46.11,
+          "duration": 6.34,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/107_pad_high_organ_000004.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 55.74,
+          "duration": 6.51,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/107_pad_high_organ_000005.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 65.34,
+          "duration": 6.47,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/107_pad_high_organ_000006.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 74.92,
+          "duration": 6.46,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/107_pad_high_organ_000007.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 0,
+          "duration": 125,
+          "source": {
+            "type": "image",
+            "src": "images/e08c7bcb-4adf-46c0-abcb-967104ae4c28.jpg",
+            "priority": 107
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "108-pad_high_organ",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "exclusive",
+          "behaviourParameters": {}
+        },
+        {
+          "behaviourType": "muteIf",
+          "behaviourParameters": {
+            "objectId": "3-silence"
+          }
+        },
+        {
+          "behaviourType": "onChange",
+          "behaviourParameters": {
+            "start": "canAlwaysStart",
+            "allocate": [
+              "stayInPrevious"
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 7.71,
+          "duration": 6.31,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/108_pad_high_organ_000000.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 17.34,
+          "duration": 6.49,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/108_pad_high_organ_000001.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 26.95,
+          "duration": 6.48,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/108_pad_high_organ_000002.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 36.52,
+          "duration": 6.42,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/108_pad_high_organ_000003.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 46.11,
+          "duration": 6.32,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/108_pad_high_organ_000004.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 55.74,
+          "duration": 6.5,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/108_pad_high_organ_000005.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 65.35,
+          "duration": 6.46,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/108_pad_high_organ_000006.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 74.92,
+          "duration": 6.43,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/108_pad_high_organ_000007.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 0,
+          "duration": 125,
+          "source": {
+            "type": "image",
+            "src": "images/e08c7bcb-4adf-46c0-abcb-967104ae4c28.jpg",
+            "priority": 108
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "111-harp",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -120,
+            "conditions": [
+              {
+                "conditionId": "c4466c42-87a9-4d9a-9b63-0a36d0c5b1d6",
+                "property": "session.objectIds",
+                "operator": "equals",
+                "value": "3-silence",
+                "invertCondition": true
+              },
+              {
+                "conditionId": "27fe980f-137d-42b6-a966-181b6720762d",
+                "property": "session.numDevices",
+                "operator": "greaterThanOrEqual",
+                "value": 5,
+                "invertCondition": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 2.95,
+          "duration": 80.3,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/111_harp_000000/manifest.mpd",
+            "urlSafari": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/111_harp_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 125,
+          "source": {
+            "type": "image",
+            "src": "images/e08c7bcb-4adf-46c0-abcb-967104ae4c28.jpg",
+            "priority": 111
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "112-harp",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "exclusive",
+          "behaviourParameters": {}
+        },
+        {
+          "behaviourType": "muteIf",
+          "behaviourParameters": {
+            "objectId": "3-silence"
+          }
+        },
+        {
+          "behaviourType": "onChange",
+          "behaviourParameters": {
+            "start": "canAlwaysStart",
+            "allocate": [
+              "stayInPrevious"
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 0,
+          "duration": 125,
+          "source": {
+            "type": "image",
+            "src": "images/e08c7bcb-4adf-46c0-abcb-967104ae4c28.jpg",
+            "priority": 112
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "133-tremolo_pad",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -120,
+            "conditions": [
+              {
+                "conditionId": "c4466c42-87a9-4d9a-9b63-0a36d0c5b1d6",
+                "property": "session.objectIds",
+                "operator": "equals",
+                "value": "3-silence",
+                "invertCondition": true
+              },
+              {
+                "conditionId": "57fcd1c1-5192-4659-8c36-425896f88d53",
+                "property": "session.numDevices",
+                "operator": "greaterThanOrEqual",
+                "value": 6,
+                "invertCondition": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 0,
+          "duration": 81.35,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/133_tremolo_pad_000000/manifest.mpd",
+            "urlSafari": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/133_tremolo_pad_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 125,
+          "source": {
+            "type": "image",
+            "src": "images/e08c7bcb-4adf-46c0-abcb-967104ae4c28.jpg",
+            "priority": 133
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "134-tremolo_pad",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "exclusive",
+          "behaviourParameters": {}
+        },
+        {
+          "behaviourType": "muteIf",
+          "behaviourParameters": {
+            "objectId": "3-silence"
+          }
+        },
+        {
+          "behaviourType": "onChange",
+          "behaviourParameters": {
+            "start": "canAlwaysStart",
+            "allocate": [
+              "stayInPrevious"
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 0,
+          "duration": 81.42,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/134_tremolo_pad_000000/manifest.mpd",
+            "urlSafari": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/134_tremolo_pad_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 125,
+          "source": {
+            "type": "image",
+            "src": "images/e08c7bcb-4adf-46c0-abcb-967104ae4c28.jpg",
+            "priority": 134
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "135-juno_pad_low",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -120,
+            "conditions": [
+              {
+                "conditionId": "c4466c42-87a9-4d9a-9b63-0a36d0c5b1d6",
+                "property": "session.objectIds",
+                "operator": "equals",
+                "value": "3-silence",
+                "invertCondition": true
+              },
+              {
+                "conditionId": "141d4157-ad5a-4866-b1f3-69c1ff641b66",
+                "property": "session.numDevices",
+                "operator": "greaterThanOrEqual",
+                "value": 7,
+                "invertCondition": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 1.86,
+          "duration": 79.58,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/135_juno_pad_low_000000/manifest.mpd",
+            "urlSafari": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/135_juno_pad_low_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 125,
+          "source": {
+            "type": "image",
+            "src": "images/e08c7bcb-4adf-46c0-abcb-967104ae4c28.jpg",
+            "priority": 135
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "136-juno_pad_low",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "exclusive",
+          "behaviourParameters": {}
+        },
+        {
+          "behaviourType": "muteIf",
+          "behaviourParameters": {
+            "objectId": "3-silence"
+          }
+        },
+        {
+          "behaviourType": "onChange",
+          "behaviourParameters": {
+            "start": "canAlwaysStart",
+            "allocate": [
+              "stayInPrevious"
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 1.89,
+          "duration": 79.55,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/136_juno_pad_low_000000/manifest.mpd",
+            "urlSafari": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/136_juno_pad_low_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 125,
+          "source": {
+            "type": "image",
+            "src": "images/e08c7bcb-4adf-46c0-abcb-967104ae4c28.jpg",
+            "priority": 136
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "141-glitch_arp",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -120,
+            "conditions": [
+              {
+                "conditionId": "c4466c42-87a9-4d9a-9b63-0a36d0c5b1d6",
+                "property": "session.objectIds",
+                "operator": "equals",
+                "value": "3-silence",
+                "invertCondition": true
+              },
+              {
+                "conditionId": "e43aaf5e-09fe-448e-b11c-0ba14be862a4",
+                "property": "session.numDevices",
+                "operator": "greaterThanOrEqual",
+                "value": 8,
+                "invertCondition": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 2.95,
+          "duration": 77.31,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/141_glitch_arp_000000/manifest.mpd",
+            "urlSafari": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/141_glitch_arp_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 125,
+          "source": {
+            "type": "image",
+            "src": "images/e08c7bcb-4adf-46c0-abcb-967104ae4c28.jpg",
+            "priority": 141
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "142-glitch_arp",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "exclusive",
+          "behaviourParameters": {}
+        },
+        {
+          "behaviourType": "muteIf",
+          "behaviourParameters": {
+            "objectId": "3-silence"
+          }
+        },
+        {
+          "behaviourType": "onChange",
+          "behaviourParameters": {
+            "start": "canAlwaysStart",
+            "allocate": [
+              "stayInPrevious"
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 2.95,
+          "duration": 77.28,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/142_glitch_arp_000000/manifest.mpd",
+            "urlSafari": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/142_glitch_arp_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 125,
+          "source": {
+            "type": "image",
+            "src": "images/e08c7bcb-4adf-46c0-abcb-967104ae4c28.jpg",
+            "priority": 142
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "151-mute_gtr",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -120,
+            "conditions": [
+              {
+                "conditionId": "c4466c42-87a9-4d9a-9b63-0a36d0c5b1d6",
+                "property": "session.objectIds",
+                "operator": "equals",
+                "value": "3-silence",
+                "invertCondition": true
+              },
+              {
+                "conditionId": "25cfabc7-7153-44c3-b764-beaff213198a",
+                "property": "session.numDevices",
+                "operator": "greaterThanOrEqual",
+                "value": 9,
+                "invertCondition": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 2.98,
+          "duration": 76.86,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/151_mute_gtr_000000/manifest.mpd",
+            "urlSafari": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/151_mute_gtr_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 125,
+          "source": {
+            "type": "image",
+            "src": "images/e08c7bcb-4adf-46c0-abcb-967104ae4c28.jpg",
+            "priority": 151
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "152-mute_gtr",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "exclusive",
+          "behaviourParameters": {}
+        },
+        {
+          "behaviourType": "muteIf",
+          "behaviourParameters": {
+            "objectId": "3-silence"
+          }
+        },
+        {
+          "behaviourType": "onChange",
+          "behaviourParameters": {
+            "start": "canAlwaysStart",
+            "allocate": [
+              "stayInPrevious"
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 2.98,
+          "duration": 76.86,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/152_mute_gtr_000000/manifest.mpd",
+            "urlSafari": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/152_mute_gtr_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 125,
+          "source": {
+            "type": "image",
+            "src": "images/e08c7bcb-4adf-46c0-abcb-967104ae4c28.jpg",
+            "priority": 152
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "501-click_tonal",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -120,
+            "conditions": [
+              {
+                "conditionId": "c4466c42-87a9-4d9a-9b63-0a36d0c5b1d6",
+                "property": "session.objectIds",
+                "operator": "equals",
+                "value": "3-silence",
+                "invertCondition": true
+              },
+              {
+                "conditionId": "3a434dae-a7c2-4982-8945-931b904323ef",
+                "property": "session.numDevices",
+                "operator": "greaterThanOrEqual",
+                "value": 10,
+                "invertCondition": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 3.54,
+          "duration": 78.61,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/501_click_tonal_000000/manifest.mpd",
+            "urlSafari": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/501_click_tonal_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 125,
+          "source": {
+            "type": "image",
+            "src": "images/e08c7bcb-4adf-46c0-abcb-967104ae4c28.jpg",
+            "priority": 501
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "502-click_tonal",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "exclusive",
+          "behaviourParameters": {}
+        },
+        {
+          "behaviourType": "muteIf",
+          "behaviourParameters": {
+            "objectId": "3-silence"
+          }
+        },
+        {
+          "behaviourType": "onChange",
+          "behaviourParameters": {
+            "start": "canAlwaysStart",
+            "allocate": [
+              "stayInPrevious"
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 3.54,
+          "duration": 78.61,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/502_click_tonal_000000/manifest.mpd",
+            "urlSafari": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/502_click_tonal_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 125,
+          "source": {
+            "type": "image",
+            "src": "images/e08c7bcb-4adf-46c0-abcb-967104ae4c28.jpg",
+            "priority": 502
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "503-hh_synthetic",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -120,
+            "conditions": [
+              {
+                "conditionId": "c4466c42-87a9-4d9a-9b63-0a36d0c5b1d6",
+                "property": "session.objectIds",
+                "operator": "equals",
+                "value": "3-silence",
+                "invertCondition": true
+              },
+              {
+                "conditionId": "14fe2239-da9f-40ce-b27d-160542d24f71",
+                "property": "session.numDevices",
+                "operator": "greaterThanOrEqual",
+                "value": 11,
+                "invertCondition": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 3.15,
+          "duration": 0.38,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000000.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 4.74,
+          "duration": 1.19,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000001.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 7.14,
+          "duration": 1.18,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000002.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 9.55,
+          "duration": 1.17,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000003.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 11.94,
+          "duration": 1.19,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000004.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 14.35,
+          "duration": 1.18,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000005.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 16.74,
+          "duration": 1.2,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000006.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 19.15,
+          "duration": 1.19,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000007.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 21.55,
+          "duration": 1.18,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000008.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 23.94,
+          "duration": 1.19,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000009.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 26.34,
+          "duration": 1.18,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000010.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 28.75,
+          "duration": 1.17,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000011.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 31.14,
+          "duration": 1.19,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000012.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 33.55,
+          "duration": 1.18,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000013.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 35.94,
+          "duration": 1.2,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000014.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 38.35,
+          "duration": 1.19,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000015.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 40.75,
+          "duration": 1.18,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000016.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 43.14,
+          "duration": 1.19,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000017.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 45.54,
+          "duration": 1.18,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000018.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 47.95,
+          "duration": 1.17,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000019.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 50.34,
+          "duration": 1.19,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000020.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 52.75,
+          "duration": 1.18,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000021.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 55.14,
+          "duration": 1.2,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000022.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 57.55,
+          "duration": 1.19,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000023.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 59.95,
+          "duration": 1.18,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000024.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 62.34,
+          "duration": 1.19,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000025.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 64.74,
+          "duration": 1.18,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000026.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 67.15,
+          "duration": 1.17,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000027.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 69.54,
+          "duration": 1.19,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000028.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 71.95,
+          "duration": 1.18,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000029.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 74.34,
+          "duration": 1.2,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000030.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 76.75,
+          "duration": 1.19,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000031.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 79.15,
+          "duration": 0.58,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/503_hh_synthetic_000032.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 0,
+          "duration": 125,
+          "source": {
+            "type": "image",
+            "src": "images/e08c7bcb-4adf-46c0-abcb-967104ae4c28.jpg",
+            "priority": 503
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "504-hh_synthetic",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "exclusive",
+          "behaviourParameters": {}
+        },
+        {
+          "behaviourType": "muteIf",
+          "behaviourParameters": {
+            "objectId": "3-silence"
+          }
+        },
+        {
+          "behaviourType": "onChange",
+          "behaviourParameters": {
+            "start": "canAlwaysStart",
+            "allocate": [
+              "stayInPrevious"
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 3.15,
+          "duration": 0.38,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000000.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 4.74,
+          "duration": 1.19,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000001.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 7.14,
+          "duration": 1.18,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000002.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 9.55,
+          "duration": 1.17,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000003.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 11.94,
+          "duration": 1.19,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000004.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 14.35,
+          "duration": 1.18,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000005.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 16.74,
+          "duration": 1.2,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000006.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 19.15,
+          "duration": 1.19,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000007.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 21.55,
+          "duration": 1.18,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000008.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 23.94,
+          "duration": 1.19,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000009.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 26.34,
+          "duration": 1.18,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000010.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 28.75,
+          "duration": 1.17,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000011.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 31.14,
+          "duration": 1.19,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000012.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 33.55,
+          "duration": 1.18,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000013.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 35.94,
+          "duration": 1.2,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000014.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 38.35,
+          "duration": 1.19,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000015.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 40.75,
+          "duration": 1.18,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000016.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 43.14,
+          "duration": 1.19,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000017.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 45.54,
+          "duration": 1.18,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000018.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 47.95,
+          "duration": 1.17,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000019.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 50.34,
+          "duration": 1.19,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000020.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 52.75,
+          "duration": 1.18,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000021.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 55.14,
+          "duration": 1.2,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000022.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 57.55,
+          "duration": 1.19,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000023.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 59.95,
+          "duration": 1.18,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000024.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 62.34,
+          "duration": 1.19,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000025.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 64.74,
+          "duration": 1.18,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000026.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 67.15,
+          "duration": 1.17,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000027.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 69.54,
+          "duration": 1.19,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000028.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 71.95,
+          "duration": 1.18,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000029.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 74.34,
+          "duration": 1.2,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000030.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 76.75,
+          "duration": 1.19,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000031.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 79.15,
+          "duration": 0.58,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/504_hh_synthetic_000032.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 0,
+          "duration": 125,
+          "source": {
+            "type": "image",
+            "src": "images/e08c7bcb-4adf-46c0-abcb-967104ae4c28.jpg",
+            "priority": 504
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "505-hh_open",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -120,
+            "conditions": [
+              {
+                "conditionId": "c4466c42-87a9-4d9a-9b63-0a36d0c5b1d6",
+                "property": "session.objectIds",
+                "operator": "equals",
+                "value": "3-silence",
+                "invertCondition": true
+              },
+              {
+                "conditionId": "956d2fe5-f21d-4dda-b285-c8e68bd5b10d",
+                "property": "session.numDevices",
+                "operator": "greaterThanOrEqual",
+                "value": 12,
+                "invertCondition": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 3.55,
+          "duration": 76.53,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/505_hh_open_000000/manifest.mpd",
+            "urlSafari": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/505_hh_open_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 125,
+          "source": {
+            "type": "image",
+            "src": "images/e08c7bcb-4adf-46c0-abcb-967104ae4c28.jpg",
+            "priority": 505
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "506-hh_open",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "exclusive",
+          "behaviourParameters": {}
+        },
+        {
+          "behaviourType": "muteIf",
+          "behaviourParameters": {
+            "objectId": "3-silence"
+          }
+        },
+        {
+          "behaviourType": "onChange",
+          "behaviourParameters": {
+            "start": "canAlwaysStart",
+            "allocate": [
+              "stayInPrevious"
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 3.55,
+          "duration": 76.51,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/506_hh_open_000000/manifest.mpd",
+            "urlSafari": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/506_hh_open_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 125,
+          "source": {
+            "type": "image",
+            "src": "images/e08c7bcb-4adf-46c0-abcb-967104ae4c28.jpg",
+            "priority": 506
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "507-hh_closed",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -120,
+            "conditions": [
+              {
+                "conditionId": "c4466c42-87a9-4d9a-9b63-0a36d0c5b1d6",
+                "property": "session.objectIds",
+                "operator": "equals",
+                "value": "3-silence",
+                "invertCondition": true
+              },
+              {
+                "conditionId": "224e3747-6f31-408b-a88b-b270b2f7eec5",
+                "property": "session.numDevices",
+                "operator": "greaterThanOrEqual",
+                "value": 13,
+                "invertCondition": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 2.95,
+          "duration": 77.31,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/507_hh_closed_000000/manifest.mpd",
+            "urlSafari": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/507_hh_closed_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 125,
+          "source": {
+            "type": "image",
+            "src": "images/e08c7bcb-4adf-46c0-abcb-967104ae4c28.jpg",
+            "priority": 507
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "508-hh_closed",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "exclusive",
+          "behaviourParameters": {}
+        },
+        {
+          "behaviourType": "muteIf",
+          "behaviourParameters": {
+            "objectId": "3-silence"
+          }
+        },
+        {
+          "behaviourType": "onChange",
+          "behaviourParameters": {
+            "start": "canAlwaysStart",
+            "allocate": [
+              "stayInPrevious"
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 2.95,
+          "duration": 77.32,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/508_hh_closed_000000/manifest.mpd",
+            "urlSafari": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/508_hh_closed_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 125,
+          "source": {
+            "type": "image",
+            "src": "images/e08c7bcb-4adf-46c0-abcb-967104ae4c28.jpg",
+            "priority": 508
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3009 @@
+{
+  "duration": 388.28,
+  "loop": false,
+  "outPoints": [],
+  "objects": [
+    {
+      "objectId": "1-stereo_pair",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -12,
+            "conditions": []
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 0,
+          "duration": 349.49,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/001_stereo_pair_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/001_stereo_pair_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 1
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "3-silence",
+      "objectBehaviours": [
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "allowedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "deviceControls.7bb8aca4-adba-482b-b289-f0d93995bb90",
+                "operator": "equals",
+                "value": "c4935f0e-b09f-464f-9e6a-e592419c020b",
+                "invertCondition": false
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -12,
+            "conditions": []
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 3
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "105-juno_chords_v1",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -10,
+            "conditions": []
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -120,
+            "conditions": [
+              {
+                "conditionId": "52da1cba-6e10-4ba5-8075-ae1e8992e534",
+                "property": "session.objectIds",
+                "operator": "equals",
+                "value": "3-silence",
+                "invertCondition": true
+              },
+              {
+                "conditionId": "b3858350-a92d-4f76-b2aa-d8785614c665",
+                "property": "session.numDevices",
+                "operator": "greaterThanOrEqual",
+                "value": 2,
+                "invertCondition": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 4.26,
+          "duration": 366.95,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/105_juno_chords_v1_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/105_juno_chords_v1_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 105
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "106-juno_chords_v1",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "exclusive",
+          "behaviourParameters": {}
+        },
+        {
+          "behaviourType": "muteIf",
+          "behaviourParameters": {
+            "objectId": "3-silence"
+          }
+        },
+        {
+          "behaviourType": "onChange",
+          "behaviourParameters": {
+            "start": "canAlwaysStart",
+            "allocate": [
+              "stayInPrevious"
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 4.26,
+          "duration": 366.99,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/106_juno_chords_v1_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/106_juno_chords_v1_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 106
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "107-juno_chords_v2",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -10,
+            "conditions": []
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -120,
+            "conditions": [
+              {
+                "conditionId": "52da1cba-6e10-4ba5-8075-ae1e8992e534",
+                "property": "session.objectIds",
+                "operator": "equals",
+                "value": "3-silence",
+                "invertCondition": true
+              },
+              {
+                "conditionId": "b3858350-a92d-4f76-b2aa-d8785614c665",
+                "property": "session.numDevices",
+                "operator": "greaterThanOrEqual",
+                "value": 3,
+                "invertCondition": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 4.26,
+          "duration": 368.46,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/107_juno_chords_v2_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/107_juno_chords_v2_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 374.33,
+          "duration": 0.17,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/107_juno_chords_v2_000001.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 107
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "108-juno_chords_v2",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "exclusive",
+          "behaviourParameters": {}
+        },
+        {
+          "behaviourType": "muteIf",
+          "behaviourParameters": {
+            "objectId": "3-silence"
+          }
+        },
+        {
+          "behaviourType": "onChange",
+          "behaviourParameters": {
+            "start": "canAlwaysStart",
+            "allocate": [
+              "stayInPrevious"
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 4.26,
+          "duration": 369.5,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/108_juno_chords_v2_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/108_juno_chords_v2_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 108
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "109-juno_chords_v3",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -10,
+            "conditions": []
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -120,
+            "conditions": [
+              {
+                "conditionId": "52da1cba-6e10-4ba5-8075-ae1e8992e534",
+                "property": "session.objectIds",
+                "operator": "equals",
+                "value": "3-silence",
+                "invertCondition": true
+              },
+              {
+                "conditionId": "b3858350-a92d-4f76-b2aa-d8785614c665",
+                "property": "session.numDevices",
+                "operator": "greaterThanOrEqual",
+                "value": 4,
+                "invertCondition": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 4.26,
+          "duration": 368.03,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/109_juno_chords_v3_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/109_juno_chords_v3_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 373.76,
+          "duration": 0.28,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/109_juno_chords_v3_000001.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 109
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "110-juno_chords_v3",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "exclusive",
+          "behaviourParameters": {}
+        },
+        {
+          "behaviourType": "muteIf",
+          "behaviourParameters": {
+            "objectId": "3-silence"
+          }
+        },
+        {
+          "behaviourType": "onChange",
+          "behaviourParameters": {
+            "start": "canAlwaysStart",
+            "allocate": [
+              "stayInPrevious"
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 4.26,
+          "duration": 368.35,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/110_juno_chords_v3_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/110_juno_chords_v3_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 374.28,
+          "duration": 0.15,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/110_juno_chords_v3_000001.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 110
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "111-juno_chords_v4",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -10,
+            "conditions": []
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -120,
+            "conditions": [
+              {
+                "conditionId": "52da1cba-6e10-4ba5-8075-ae1e8992e534",
+                "property": "session.objectIds",
+                "operator": "equals",
+                "value": "3-silence",
+                "invertCondition": true
+              },
+              {
+                "conditionId": "b3858350-a92d-4f76-b2aa-d8785614c665",
+                "property": "session.numDevices",
+                "operator": "greaterThanOrEqual",
+                "value": 5,
+                "invertCondition": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 4.26,
+          "duration": 368.06,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/111_juno_chords_v4_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/111_juno_chords_v4_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 373.9,
+          "duration": 1.2,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/111_juno_chords_v4_000001.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 111
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "112-juno_chords_v4",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "exclusive",
+          "behaviourParameters": {}
+        },
+        {
+          "behaviourType": "muteIf",
+          "behaviourParameters": {
+            "objectId": "3-silence"
+          }
+        },
+        {
+          "behaviourType": "onChange",
+          "behaviourParameters": {
+            "start": "canAlwaysStart",
+            "allocate": [
+              "stayInPrevious"
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 4.28,
+          "duration": 369.23,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/112_juno_chords_v4_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/112_juno_chords_v4_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 374.51,
+          "duration": 1.02,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/112_juno_chords_v4_000001.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 112
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "113-juno_chords_v5",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -10,
+            "conditions": []
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -120,
+            "conditions": [
+              {
+                "conditionId": "52da1cba-6e10-4ba5-8075-ae1e8992e534",
+                "property": "session.objectIds",
+                "operator": "equals",
+                "value": "3-silence",
+                "invertCondition": true
+              },
+              {
+                "conditionId": "b3858350-a92d-4f76-b2aa-d8785614c665",
+                "property": "session.numDevices",
+                "operator": "greaterThanOrEqual",
+                "value": 6,
+                "invertCondition": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 4.26,
+          "duration": 370.91,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/113_juno_chords_v5_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/113_juno_chords_v5_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 113
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "114-juno_chords_v5",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "exclusive",
+          "behaviourParameters": {}
+        },
+        {
+          "behaviourType": "muteIf",
+          "behaviourParameters": {
+            "objectId": "3-silence"
+          }
+        },
+        {
+          "behaviourType": "onChange",
+          "behaviourParameters": {
+            "start": "canAlwaysStart",
+            "allocate": [
+              "stayInPrevious"
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 4.26,
+          "duration": 371.54,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/114_juno_chords_v5_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/114_juno_chords_v5_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 114
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "150-lead_sparkle_original",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -10,
+            "conditions": []
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -120,
+            "conditions": [
+              {
+                "conditionId": "52da1cba-6e10-4ba5-8075-ae1e8992e534",
+                "property": "session.objectIds",
+                "operator": "equals",
+                "value": "3-silence",
+                "invertCondition": true
+              },
+              {
+                "conditionId": "b3858350-a92d-4f76-b2aa-d8785614c665",
+                "property": "session.numDevices",
+                "operator": "greaterThanOrEqual",
+                "value": 7,
+                "invertCondition": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 4.23,
+          "duration": 10.65,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/150_lead_sparkle_original_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/150_lead_sparkle_original_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 20.23,
+          "duration": 8.81,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/150_lead_sparkle_original_000001.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 36.2,
+          "duration": 10.13,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/150_lead_sparkle_original_000002/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/150_lead_sparkle_original_000002/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 48.23,
+          "duration": 16.81,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/150_lead_sparkle_original_000003/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/150_lead_sparkle_original_000003/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 68.23,
+          "duration": 10.39,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/150_lead_sparkle_original_000004/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/150_lead_sparkle_original_000004/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 84.23,
+          "duration": 8.83,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/150_lead_sparkle_original_000005.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 100.2,
+          "duration": 9.95,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/150_lead_sparkle_original_000006.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 112.23,
+          "duration": 16.82,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/150_lead_sparkle_original_000007/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/150_lead_sparkle_original_000007/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 132.24,
+          "duration": 12.71,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/150_lead_sparkle_original_000008/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/150_lead_sparkle_original_000008/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 148.23,
+          "duration": 8.96,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/150_lead_sparkle_original_000009.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 160.23,
+          "duration": 13.22,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/150_lead_sparkle_original_000010/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/150_lead_sparkle_original_000010/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 180.23,
+          "duration": 26.1,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/150_lead_sparkle_original_000011/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/150_lead_sparkle_original_000011/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 212.23,
+          "duration": 8.54,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/150_lead_sparkle_original_000012.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 228.2,
+          "duration": 10.14,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/150_lead_sparkle_original_000013/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/150_lead_sparkle_original_000013/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 240.23,
+          "duration": 16.81,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/150_lead_sparkle_original_000014/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/150_lead_sparkle_original_000014/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 260.23,
+          "duration": 10.21,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/150_lead_sparkle_original_000015/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/150_lead_sparkle_original_000015/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 276.23,
+          "duration": 8.86,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/150_lead_sparkle_original_000016.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 292.2,
+          "duration": 10.64,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/150_lead_sparkle_original_000017/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/150_lead_sparkle_original_000017/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 304.23,
+          "duration": 16.79,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/150_lead_sparkle_original_000018/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/150_lead_sparkle_original_000018/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 150
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "151-lead_sparkle_original",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "exclusive",
+          "behaviourParameters": {}
+        },
+        {
+          "behaviourType": "muteIf",
+          "behaviourParameters": {
+            "objectId": "3-silence"
+          }
+        },
+        {
+          "behaviourType": "onChange",
+          "behaviourParameters": {
+            "start": "canAlwaysStart",
+            "allocate": [
+              "stayInPrevious"
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 4.23,
+          "duration": 10.18,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/151_lead_sparkle_original_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/151_lead_sparkle_original_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 20.23,
+          "duration": 9.15,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/151_lead_sparkle_original_000001.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 36.2,
+          "duration": 9.91,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/151_lead_sparkle_original_000002.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 48.23,
+          "duration": 16.83,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/151_lead_sparkle_original_000003/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/151_lead_sparkle_original_000003/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 68.23,
+          "duration": 10.08,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/151_lead_sparkle_original_000004.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 84.23,
+          "duration": 8.67,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/151_lead_sparkle_original_000005.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 100.2,
+          "duration": 10.04,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/151_lead_sparkle_original_000006.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 112.23,
+          "duration": 16.81,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/151_lead_sparkle_original_000007/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/151_lead_sparkle_original_000007/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 132.24,
+          "duration": 12.59,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/151_lead_sparkle_original_000008/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/151_lead_sparkle_original_000008/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 148.23,
+          "duration": 8.77,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/151_lead_sparkle_original_000009.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 160.23,
+          "duration": 12.83,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/151_lead_sparkle_original_000010/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/151_lead_sparkle_original_000010/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 180.23,
+          "duration": 26.16,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/151_lead_sparkle_original_000011/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/151_lead_sparkle_original_000011/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 212.23,
+          "duration": 8.46,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/151_lead_sparkle_original_000012.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 228.2,
+          "duration": 10.18,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/151_lead_sparkle_original_000013/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/151_lead_sparkle_original_000013/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 240.23,
+          "duration": 17.04,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/151_lead_sparkle_original_000014/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/151_lead_sparkle_original_000014/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 260.23,
+          "duration": 9.78,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/151_lead_sparkle_original_000015.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 276.23,
+          "duration": 8.46,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/151_lead_sparkle_original_000016.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 292.2,
+          "duration": 10.01,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "buffer",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/151_lead_sparkle_original_000017.m4a",
+            "urlSafari": null
+          }
+        },
+        {
+          "start": 304.23,
+          "duration": 16.65,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/151_lead_sparkle_original_000018/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/151_lead_sparkle_original_000018/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 151
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "152-lead_sparkle_smooth",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -10,
+            "conditions": []
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -120,
+            "conditions": [
+              {
+                "conditionId": "52da1cba-6e10-4ba5-8075-ae1e8992e534",
+                "property": "session.objectIds",
+                "operator": "equals",
+                "value": "3-silence",
+                "invertCondition": true
+              },
+              {
+                "conditionId": "b3858350-a92d-4f76-b2aa-d8785614c665",
+                "property": "session.numDevices",
+                "operator": "greaterThanOrEqual",
+                "value": 8,
+                "invertCondition": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 4.23,
+          "duration": 14.78,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/152_lead_sparkle_smooth_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/152_lead_sparkle_smooth_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 20.23,
+          "duration": 62.79,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/152_lead_sparkle_smooth_000001/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/152_lead_sparkle_smooth_000001/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 84.23,
+          "duration": 126.43,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/152_lead_sparkle_smooth_000002/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/152_lead_sparkle_smooth_000002/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 212.23,
+          "duration": 62.49,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/152_lead_sparkle_smooth_000003/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/152_lead_sparkle_smooth_000003/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 276.23,
+          "duration": 47.96,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/152_lead_sparkle_smooth_000004/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/152_lead_sparkle_smooth_000004/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 152
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "153-lead_sparkle_smooth",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "exclusive",
+          "behaviourParameters": {}
+        },
+        {
+          "behaviourType": "muteIf",
+          "behaviourParameters": {
+            "objectId": "3-silence"
+          }
+        },
+        {
+          "behaviourType": "onChange",
+          "behaviourParameters": {
+            "start": "canAlwaysStart",
+            "allocate": [
+              "stayInPrevious"
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 4.23,
+          "duration": 14.25,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/153_lead_sparkle_smooth_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/153_lead_sparkle_smooth_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 20.23,
+          "duration": 62.84,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/153_lead_sparkle_smooth_000001/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/153_lead_sparkle_smooth_000001/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 84.23,
+          "duration": 126.44,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/153_lead_sparkle_smooth_000002/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/153_lead_sparkle_smooth_000002/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 212.23,
+          "duration": 62.82,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/153_lead_sparkle_smooth_000003/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/153_lead_sparkle_smooth_000003/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 276.24,
+          "duration": 47.73,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/153_lead_sparkle_smooth_000004/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/153_lead_sparkle_smooth_000004/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 153
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "154-lead_dist",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -10,
+            "conditions": []
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -120,
+            "conditions": [
+              {
+                "conditionId": "52da1cba-6e10-4ba5-8075-ae1e8992e534",
+                "property": "session.objectIds",
+                "operator": "equals",
+                "value": "3-silence",
+                "invertCondition": true
+              },
+              {
+                "conditionId": "b3858350-a92d-4f76-b2aa-d8785614c665",
+                "property": "session.numDevices",
+                "operator": "greaterThanOrEqual",
+                "value": 9,
+                "invertCondition": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 4.16,
+          "duration": 337.49,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/154_lead_dist_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/154_lead_dist_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 154
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "155-lead_dist",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "exclusive",
+          "behaviourParameters": {}
+        },
+        {
+          "behaviourType": "muteIf",
+          "behaviourParameters": {
+            "objectId": "3-silence"
+          }
+        },
+        {
+          "behaviourType": "onChange",
+          "behaviourParameters": {
+            "start": "canAlwaysStart",
+            "allocate": [
+              "stayInPrevious"
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 4.16,
+          "duration": 337.49,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/155_lead_dist_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/155_lead_dist_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 155
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "156-lead_clean",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -12,
+            "conditions": []
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -120,
+            "conditions": [
+              {
+                "conditionId": "52da1cba-6e10-4ba5-8075-ae1e8992e534",
+                "property": "session.objectIds",
+                "operator": "equals",
+                "value": "3-silence",
+                "invertCondition": true
+              },
+              {
+                "conditionId": "b3858350-a92d-4f76-b2aa-d8785614c665",
+                "property": "session.numDevices",
+                "operator": "greaterThanOrEqual",
+                "value": 10,
+                "invertCondition": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 4.3,
+          "duration": 174.03,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/156_lead_clean_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/156_lead_clean_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 180.36,
+          "duration": 158.72,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/156_lead_clean_000001/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/156_lead_clean_000001/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 156
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "157-lead_clean",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "exclusive",
+          "behaviourParameters": {}
+        },
+        {
+          "behaviourType": "muteIf",
+          "behaviourParameters": {
+            "objectId": "3-silence"
+          }
+        },
+        {
+          "behaviourType": "onChange",
+          "behaviourParameters": {
+            "start": "canAlwaysStart",
+            "allocate": [
+              "stayInPrevious"
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 4.3,
+          "duration": 173.72,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/157_lead_clean_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/157_lead_clean_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 180.36,
+          "duration": 158.73,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/157_lead_clean_000001/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/157_lead_clean_000001/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 157
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "170-cymbal_flutter",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -10,
+            "conditions": []
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -120,
+            "conditions": [
+              {
+                "conditionId": "52da1cba-6e10-4ba5-8075-ae1e8992e534",
+                "property": "session.objectIds",
+                "operator": "equals",
+                "value": "3-silence",
+                "invertCondition": true
+              },
+              {
+                "conditionId": "b3858350-a92d-4f76-b2aa-d8785614c665",
+                "property": "session.numDevices",
+                "operator": "greaterThanOrEqual",
+                "value": 11,
+                "invertCondition": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 3.83,
+          "duration": 15.03,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/170_cymbal_flutter_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/170_cymbal_flutter_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 20.45,
+          "duration": 14.05,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/170_cymbal_flutter_000001/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/170_cymbal_flutter_000001/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 74.89,
+          "duration": 14.98,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/170_cymbal_flutter_000002/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/170_cymbal_flutter_000002/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 170
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "171-cymbal_flutter",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "exclusive",
+          "behaviourParameters": {}
+        },
+        {
+          "behaviourType": "muteIf",
+          "behaviourParameters": {
+            "objectId": "3-silence"
+          }
+        },
+        {
+          "behaviourType": "onChange",
+          "behaviourParameters": {
+            "start": "canAlwaysStart",
+            "allocate": [
+              "stayInPrevious"
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 3.83,
+          "duration": 14.72,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/171_cymbal_flutter_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/171_cymbal_flutter_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 20.46,
+          "duration": 14.17,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/171_cymbal_flutter_000001/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/171_cymbal_flutter_000001/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 74.91,
+          "duration": 14.78,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/171_cymbal_flutter_000002/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/171_cymbal_flutter_000002/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 171
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "172-pluck_flutter",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -10,
+            "conditions": []
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -120,
+            "conditions": [
+              {
+                "conditionId": "52da1cba-6e10-4ba5-8075-ae1e8992e534",
+                "property": "session.objectIds",
+                "operator": "equals",
+                "value": "3-silence",
+                "invertCondition": true
+              },
+              {
+                "conditionId": "b3858350-a92d-4f76-b2aa-d8785614c665",
+                "property": "session.numDevices",
+                "operator": "greaterThanOrEqual",
+                "value": 12,
+                "invertCondition": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 35.28,
+          "duration": 35.46,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/172_pluck_flutter_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/172_pluck_flutter_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 99.39,
+          "duration": 35.45,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/172_pluck_flutter_000001/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/172_pluck_flutter_000001/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 172.42,
+          "duration": 29.71,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/172_pluck_flutter_000002/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/172_pluck_flutter_000002/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 227.38,
+          "duration": 35.32,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/172_pluck_flutter_000003/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/172_pluck_flutter_000003/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 291.48,
+          "duration": 35.49,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/172_pluck_flutter_000004/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/172_pluck_flutter_000004/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 172
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "173-pluck_flutter",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "exclusive",
+          "behaviourParameters": {}
+        },
+        {
+          "behaviourType": "muteIf",
+          "behaviourParameters": {
+            "objectId": "3-silence"
+          }
+        },
+        {
+          "behaviourType": "onChange",
+          "behaviourParameters": {
+            "start": "canAlwaysStart",
+            "allocate": [
+              "stayInPrevious"
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 35.33,
+          "duration": 35.55,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/173_pluck_flutter_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/173_pluck_flutter_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 99.33,
+          "duration": 35.34,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/173_pluck_flutter_000001/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/173_pluck_flutter_000001/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 172.47,
+          "duration": 30.14,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/173_pluck_flutter_000002/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/173_pluck_flutter_000002/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 227.43,
+          "duration": 35.31,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/173_pluck_flutter_000003/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/173_pluck_flutter_000003/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 291.53,
+          "duration": 35.4,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/173_pluck_flutter_000004/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/173_pluck_flutter_000004/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 173
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "175-moving_echo_1",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "exclusive",
+          "behaviourParameters": {}
+        },
+        {
+          "behaviourType": "muteIf",
+          "behaviourParameters": {
+            "objectId": "3-silence"
+          }
+        },
+        {
+          "behaviourType": "onChange",
+          "behaviourParameters": {
+            "start": "canAlwaysStart",
+            "allocate": [
+              "stayInPrevious"
+            ]
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -120,
+            "conditions": [
+              {
+                "conditionId": "52da1cba-6e10-4ba5-8075-ae1e8992e534",
+                "property": "session.objectIds",
+                "operator": "equals",
+                "value": "3-silence",
+                "invertCondition": true
+              },
+              {
+                "conditionId": "b3858350-a92d-4f76-b2aa-d8785614c665",
+                "property": "session.numDevices",
+                "operator": "equals",
+                "value": 2,
+                "invertCondition": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 12.35,
+          "duration": 25.7,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/175_moving_echo_1_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/175_moving_echo_1_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 43.59,
+          "duration": 33.45,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/175_moving_echo_1_000001/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/175_moving_echo_1_000001/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 107.89,
+          "duration": 33.77,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/175_moving_echo_1_000002/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/175_moving_echo_1_000002/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 204.35,
+          "duration": 25.63,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/175_moving_echo_1_000003/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/175_moving_echo_1_000003/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 235.73,
+          "duration": 33.41,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/175_moving_echo_1_000004/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/175_moving_echo_1_000004/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 299.5,
+          "duration": 34.23,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/175_moving_echo_1_000005/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/175_moving_echo_1_000005/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 175
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "176-moving_echo_2",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "exclusive",
+          "behaviourParameters": {}
+        },
+        {
+          "behaviourType": "muteIf",
+          "behaviourParameters": {
+            "objectId": "3-silence"
+          }
+        },
+        {
+          "behaviourType": "onChange",
+          "behaviourParameters": {
+            "start": "canAlwaysStart",
+            "allocate": [
+              "stayInPrevious"
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 24.09,
+          "duration": 27.53,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/176_moving_echo_2_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/176_moving_echo_2_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 55.41,
+          "duration": 27.46,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/176_moving_echo_2_000001/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/176_moving_echo_2_000001/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 216.09,
+          "duration": 27.53,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/176_moving_echo_2_000002/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/176_moving_echo_2_000002/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 247.41,
+          "duration": 27.46,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/176_moving_echo_2_000003/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/176_moving_echo_2_000003/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 176
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "191-mid_tremolo_v1",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -10,
+            "conditions": []
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -120,
+            "conditions": [
+              {
+                "conditionId": "52da1cba-6e10-4ba5-8075-ae1e8992e534",
+                "property": "session.objectIds",
+                "operator": "equals",
+                "value": "3-silence",
+                "invertCondition": true
+              },
+              {
+                "conditionId": "b3858350-a92d-4f76-b2aa-d8785614c665",
+                "property": "session.numDevices",
+                "operator": "greaterThanOrEqual",
+                "value": 13,
+                "invertCondition": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 4.24,
+          "duration": 321.46,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/191_mid_tremolo_v1_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/191_mid_tremolo_v1_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 191
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "192-mid_tremolo_v1",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "exclusive",
+          "behaviourParameters": {}
+        },
+        {
+          "behaviourType": "muteIf",
+          "behaviourParameters": {
+            "objectId": "3-silence"
+          }
+        },
+        {
+          "behaviourType": "onChange",
+          "behaviourParameters": {
+            "start": "canAlwaysStart",
+            "allocate": [
+              "stayInPrevious"
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 4.24,
+          "duration": 321.46,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/192_mid_tremolo_v1_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/192_mid_tremolo_v1_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 192
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "193-mid_tremolo_v2",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -10,
+            "conditions": []
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -120,
+            "conditions": [
+              {
+                "conditionId": "52da1cba-6e10-4ba5-8075-ae1e8992e534",
+                "property": "session.objectIds",
+                "operator": "equals",
+                "value": "3-silence",
+                "invertCondition": true
+              },
+              {
+                "conditionId": "b3858350-a92d-4f76-b2aa-d8785614c665",
+                "property": "session.numDevices",
+                "operator": "greaterThanOrEqual",
+                "value": 14,
+                "invertCondition": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 4.24,
+          "duration": 321.46,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/193_mid_tremolo_v2_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/193_mid_tremolo_v2_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 193
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "194-mid_tremolo_v2",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "exclusive",
+          "behaviourParameters": {}
+        },
+        {
+          "behaviourType": "muteIf",
+          "behaviourParameters": {
+            "objectId": "3-silence"
+          }
+        },
+        {
+          "behaviourType": "onChange",
+          "behaviourParameters": {
+            "start": "canAlwaysStart",
+            "allocate": [
+              "stayInPrevious"
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 4.24,
+          "duration": 321.46,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/194_mid_tremolo_v2_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/194_mid_tremolo_v2_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 194
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "195-synth_rythm_v1",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -12,
+            "conditions": []
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -120,
+            "conditions": [
+              {
+                "conditionId": "52da1cba-6e10-4ba5-8075-ae1e8992e534",
+                "property": "session.objectIds",
+                "operator": "equals",
+                "value": "3-silence",
+                "invertCondition": true
+              },
+              {
+                "conditionId": "b3858350-a92d-4f76-b2aa-d8785614c665",
+                "property": "session.numDevices",
+                "operator": "greaterThanOrEqual",
+                "value": 15,
+                "invertCondition": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 3.92,
+          "duration": 344.62,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/195_synth_rythm_v1_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/195_synth_rythm_v1_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 195
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "196-synth_rythm_v1",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "exclusive",
+          "behaviourParameters": {}
+        },
+        {
+          "behaviourType": "muteIf",
+          "behaviourParameters": {
+            "objectId": "3-silence"
+          }
+        },
+        {
+          "behaviourType": "onChange",
+          "behaviourParameters": {
+            "start": "canAlwaysStart",
+            "allocate": [
+              "stayInPrevious"
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 3.91,
+          "duration": 344.63,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/196_synth_rythm_v1_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/196_synth_rythm_v1_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 196
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "197-synth_rythm_v2",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": false
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -10,
+            "conditions": []
+          }
+        },
+        {
+          "behaviourType": "gainAdjustmentIf",
+          "behaviourParameters": {
+            "gainAdjust": -120,
+            "conditions": [
+              {
+                "conditionId": "85a517af-9f65-4a88-9304-e53ec393c686",
+                "property": "session.objectIds",
+                "operator": "equals",
+                "value": "3-silence",
+                "invertCondition": true
+              },
+              {
+                "conditionId": "ca928b0c-c6ad-461c-af9e-d824382fe6a5",
+                "property": "session.numDevices",
+                "operator": "greaterThanOrEqual",
+                "value": 16,
+                "invertCondition": false
+              }
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 3.92,
+          "duration": 344.57,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/197_synth_rythm_v2_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/197_synth_rythm_v2_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 197
+          }
+        }
+      ]
+    },
+    {
+      "objectId": "198-synth_rythm_v2",
+      "objectBehaviours": [
+        {
+          "behaviourType": "allowedEverywhere"
+        },
+        {
+          "behaviourType": "prohibitedIf",
+          "behaviourParameters": {
+            "conditions": [
+              {
+                "property": "device.deviceIsMain",
+                "operator": "equals",
+                "value": true
+              }
+            ]
+          }
+        },
+        {
+          "behaviourType": "exclusive",
+          "behaviourParameters": {}
+        },
+        {
+          "behaviourType": "muteIf",
+          "behaviourParameters": {
+            "objectId": "3-silence"
+          }
+        },
+        {
+          "behaviourType": "onChange",
+          "behaviourParameters": {
+            "start": "canAlwaysStart",
+            "allocate": [
+              "stayInPrevious"
+            ]
+          }
+        }
+      ],
+      "items": [
+        {
+          "start": 3.93,
+          "duration": 344.46,
+          "source": {
+            "channelMapping": "stereo",
+            "panning": 0,
+            "type": "dash",
+            "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/198_synth_rythm_v2_000000/manifest.mpd",
+            "urlSafari": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/198_synth_rythm_v2_000000/manifest-safari.mpd"
+          }
+        },
+        {
+          "start": 0,
+          "duration": 388,
+          "source": {
+            "type": "image",
+            "src": "images/94cdc7d0-ec7a-4865-a25a-b6ddce86c9e5.jpg",
+            "priority": 198
+          }
+        }
+      ]
+    }
+  ]
+}
